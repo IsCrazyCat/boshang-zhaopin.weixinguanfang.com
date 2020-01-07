@@ -1,0 +1,42 @@
+<include file='public:header'/>
+<div class="mainBt">
+	<ul>
+		<li class="li1">设置</li>
+		<li class="li2">基本设置</li>
+		<li class="li2 li3">排行榜设置</li>
+	</ul>
+</div>
+<p class="attention">
+	<span></span>
+</p>
+<form target="x-frame" action="<{:U('setting/rankingsite')}>" method="post">
+	<div class="mainScAdd">
+		<div class="tableBox">
+			<table bordercolor="#dbdbdb" cellspacing="0" width="100%" border="1px" style=" border-collapse: collapse; margin:0px;background-color:#fff;">
+			<tr>
+				<td class="lfTdBt">
+					排名规则：
+				</td>
+				<td class="rgTdBt">
+					<textarea type="text" name="data[remark]" class="scAddTextName "><{$CONFIG.ranking.remark}></textarea>
+					<code></code>
+				</td>
+			</tr>
+			<tr>
+				<td class="lfTdBt">
+					说明：
+				</td>
+				<td class="rgTdBt">
+					<textarea type="text" name="data[remark1]"  class="scAddTextName "><{$CONFIG.ranking.remark1}></textarea>
+					<code></code>
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="smtQr">
+			<input type="submit" value="确认保存" class="smtQrIpt"/>
+		</div>
+	</div>
+</form>
+<include file='public:footer'/>

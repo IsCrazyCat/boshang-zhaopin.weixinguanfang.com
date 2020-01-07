@@ -1,0 +1,56 @@
+<include  file='public:header'/>
+<div class="mainBt">
+    <ul>
+        <li class="li1">会员认证</li>
+        <li class="li2">实名认证</li>
+        <li class="li2 li3">编辑会员认证</li>
+    </ul>
+</div>
+<form target="x-frame" action="<{:U('usersaux/edit',array('user_id'=>$detail['user_id']))}>" method="post">
+    <div class="mainScAdd">
+        <div class="tableBox">
+            <table bordercolor="#e1e6eb" cellspacing="0" width="100%" border="1px"  style=" border-collapse: collapse; margin:0px; vertical-align:middle; background-color:#FFF;" >
+            
+             <tr>
+                    <td class="lfTdBt">实名用户：</td>
+                    <td class="rgTdBt">
+                        <div class="lt">
+                            <input type="hidden" id="user_id" name="data[user_id]" value="<{$detail.user_id|default=''}>"/>
+                            <input class="scAddTextName sj" type="text" name="nickname" id="nickname"  value="<{$user.nickname}>" />
+                        </div>
+                        <a mini="select"  w="800" h="600" href="<{:U('user/select')}>" class="seleSj">选择用户</a>
+                        <code>不要去更改，虽然后台不做限制，但是乱修改会导致认证信息错乱</code>
+                    </td>
+                </tr> 
+                
+
+            
+                
+                <tr>
+                    <td class="lfTdBt">姓名：</td>
+                    <td class="rgTdBt"><input type="text" name="data[name]" value="<{$detail.name|default=''}>" class="scAddTextName w260" />
+					<code>会员的实名认证姓名</code>
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td class="lfTdBt">手机：</td>
+                    <td class="rgTdBt"><input type="text" name="data[mobile]" value="<{$detail.mobile|default=''}>" class="scAddTextName w260" />
+					<code>会员的实名认证手机</code>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <td class="lfTdBt">身份证号码：</td>
+                    <td class="rgTdBt"><input type="text" name="data[card_id]" value="<{$detail.card_id|default=''}>" class="scAddTextName w260" />
+					<code>会员的身份证号码，后台不做判断，管理员乱修改后果自负</code>
+                    </td>
+                </tr>
+
+    </table>
+</div>
+<div class="smtQr"><input type="submit" value="确定编辑" class="smtQrIpt" /></div>
+</div>
+</form>
+<include  file='public:footer'/>       

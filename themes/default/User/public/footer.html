@@ -1,0 +1,30 @@
+<div class="blank-20"></div>
+ <footer class="foot-fixed">
+
+     <a class="foot-item <if condition="$ctl eq 'index'">active</if>" href="<{:u('wap/index/index')}>">
+     <span class="iconfont icon-shouye"></span>
+     <span class="foot-label">首页</span>
+     </a>
+
+     <a class="foot-item  <if condition="($ctl eq 'mall')">active</if>" href="<{:u('wap/mall/index')}>">
+     <span class="iconfont icon-maidan"></span><span class="foot-label">找工作</span></a>
+
+     <a class="foot-item  <if condition="$ctl eq 'information'">active</if>" href="<{:u('information/index')}>">
+     <span class="iconfont icon-guanli"></span><span class="foot-label">排行榜</span></a>
+
+     <a class="foot-item  <if condition="$ctl eq 'member'">active</if> " href="<{:LinkTo('user/member/index')}>">
+     <span class="iconfont icon-fabu"></span><span class="foot-label">个人中心</span></a>
+
+    </footer>
+
+
+<iframe id="x-frame" name="x-frame" style="display:none;"></iframe>
+<style>
+.add-message {margin-top: 30px;}
+.add-button{ text-align:center;}
+.layui-layer-title {border-bottom: 0px solid #eee;}
+</style>
+
+
+</body>
+</html>

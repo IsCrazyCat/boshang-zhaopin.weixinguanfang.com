@@ -1,0 +1,54 @@
+<include file='public:header'/>
+
+<div class="mainBt">
+    <ul>
+        <li class="li1">商城</li>
+        <li class="li2">工作管理</li>
+        <li class="li2 li3">新增</li>
+    </ul>
+</div>
+
+<style>
+    .lfTdBt {
+        width: 160px;
+    }
+</style>
+<div class="mainScAdd ">
+
+    <div class="tableBox">
+        <form target="x-frame" action="<{:U('goods/instructions')}>" method="post">
+            <table bordercolor="#e1e6eb" cellspacing="0" width="100%" border="1px"
+                   style=" border-collapse: collapse; margin:0px; vertical-align:middle; background-color:#FFF;">
+                <tr>
+                    <td class="lfTdBt">平台补贴：</td>
+                    <td class="rgTdBt">
+                        <script type="text/plain" id="data_instructions" name="data[instructions]"
+                                style="width:800px;height:360px;"><{$detail.instructions}>
+                        </script>
+                    </td>
+                </tr>
+                <link rel="stylesheet" href="__PUBLIC__/qiniu_ueditor/themes/default/css/ueditor.min.css"
+                      type="text/css">
+                <script type="text/javascript" charset="utf-8"
+                        src="__PUBLIC__/qiniu_ueditor/ueditor.config.js"></script>
+                <script type="text/javascript" charset="utf-8"
+                        src="__PUBLIC__/qiniu_ueditor/ueditor.all.min.js"></script>
+                <script type="text/javascript" src="__PUBLIC__/qiniu_ueditor/lang/zh-cn/zh-cn.js"></script>
+                <script>
+                    um2 = UE.getEditor('data_instructions', {
+                        lang: 'zh-cn',
+                        toolbars: [['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic', 'underline', 'fontborder', 'backcolor', 'fontsize', 'fontfamily',]],
+                    });
+                </script>
+
+            </table>
+            <div style="margin-left:140px;margin-top:20px">
+                <input type="button" value="添加一条" class="smtQrIpt"/>
+            </div>
+            <div style="margin-left:140px;margin-top:20px">
+                <input type="submit" value="确认添加" class="smtQrIpt"/>
+            </div>
+        </form>
+    </div>
+</div>
+<include file='public:footer'/>

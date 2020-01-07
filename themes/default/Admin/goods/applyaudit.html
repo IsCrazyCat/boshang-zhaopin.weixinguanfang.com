@@ -1,0 +1,28 @@
+<div class="mainScAdd ">
+    <div class="tableBox">
+        <form  target="x-frame" action="<{:U('goods/applyaudit',array('goods_id'=>$goods_id,'apply_ids'=>$apply_ids))}>" method="post">
+            <table  bordercolor="#dbdbdb" cellspacing="0" width="100%" border="1px"  style=" border-collapse: collapse; margin:0px; vertical-align:middle; background-color:#FFF;" >
+                <tr>
+                    <td class="lfTdBt">状态：</td>
+                    <td class="rgTdBt">
+                        <select name="data[audit]">
+                            <option value="1">审核通过</option>
+                            <option value="2">驳回</option>
+                        </select>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lfTdBt">备注：</td>
+                    <td class="rgTdBt">
+                        <textarea name="data[remake]" value="" style="width: 150px;height: 100px"></textarea>
+                        <code>驳回必填</code>
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" value="<{$goods_id}>" name="data[goods_id]"/>
+            <input type="hidden" value="<{$apply_ids}>" name="data[apply_ids]"/>
+            <div class="smtQr"><input type="submit" value="确认" class="smtQrIpt" /></div>
+        </form>
+    </div>
+</div>

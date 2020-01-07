@@ -1,0 +1,37 @@
+<foreach name="goods" item="v" index="index">
+	<li>
+		<a href="<{:U('wap/mall/detail',array('goods_id'=>$v['goods_id']))}>"
+		   class="">
+			<div class="item-image">
+				<img src="<{$v['photo']}>" width="100%">
+			</div>
+			<div class="item-inner">
+				<div>
+					<p class="item-number" title="<{$v.title}>">
+						<{$v.title}>
+					</p>
+				</div>
+				<p class="index-item-subtitle">
+					<{$v.guige}>
+				</p>
+				<div class="item-price-row">
+					<p class="price-price" style="padding-bottom: 10px">
+						<span><{$v.price_month}></span>
+						元/月
+					</p>
+				</div>
+				<div class="item-amount">
+					<p class="hot-mark ">
+<!--						<if condition="$v.show_price_type lt 2">-->
+<!--							工价-->
+<!--							<else/>-->
+<!--							补贴-->
+<!--						</if>-->
+						<{$v['price_title']}>
+					</p>
+					<p><{:round($v['price']/100,2)}><{$v['price_unit']}></p>
+				</div>
+			</div>
+		</a>
+	</li>
+</foreach>

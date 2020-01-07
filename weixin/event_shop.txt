@@ -1,0 +1,9 @@
+array (
+  0 => 
+  array (
+    0 => NULL,
+    1 => NULL,
+    2 => 'http://zhaopin.weixinguanfang.com/attachs/default.jpg',
+    3 => NULL,
+  ),
+)

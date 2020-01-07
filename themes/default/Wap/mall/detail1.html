@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title><{$job_info[job_name]}></title>
+    <meta name="keywords" content="<{$mobile_keywords}>" />
+    <meta name="description" content="<{$mobile_description}>" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta itemprop="description" content="让求职者高薪就业，从业者终生受益是我们的追求！">
+    <link rel="stylesheet" href="/static/default/wap/css/index/sm.min.css">
+    <link rel="stylesheet" href="/static/default/wap/css/index/demos.css">
+    <link rel="stylesheet" href="/static/default/wap/css/index/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="/static/default/wap/css/index/jobDetails.css">
+    <style>
+        @media (min-width: 768px) {
+            .row .col-33 {
+                width: 29.333333333333332%;
+            }
+        }
+    </style>
+    <link href="/static/default/wap/css/index/layer.css" type="text/css" rel="styleSheet" id="layermcss">
+</head>
+<body>
+
+<div class="page-group">
+    <div id="page-nav-bar-labels" class="page page-current">
+
+        <div class="content native-scroll">
+            <div class="button-back">
+                <img src="__STATIC__/images/niuzhi/back.png">
+            </div>
+            <div id="roll_banner">
+                <div class="swiper-container swiper-container-horizontal swiper-container-android"
+                     data-space-between="10">
+                    <div class="swiper-wrapper"
+                         style="transform: translate3d(-1920px, 0px, 0px); transition-duration: 0ms;">
+                        <foreach name="job_images" item="v" index="index">
+                            <div class="swiper-slide" data-swiper-slide-index="<{$index}>" style="width: 480px;">
+                                <img src="<{$v['image_url']}>" width="100%">
+                            </div>
+                        </foreach>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+                <div class="swiper-pagination swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                </div>
+            </div>
+
+            <div class="item-prodesc">
+                <div class="item-company">
+                    <div class="item-company-box">
+                        <p class="name"><{$detail['title']}></p>
+                    </div>
+
+                    <p class="job-tag">
+                        <span><{$detail['guige']}></span>
+                    </p>
+
+                    <div class="price">
+                        <span class="price-tag">
+                            <span style="font-size: .65rem;color: #5e5e5e;font-weight:normal">厂发薪资：</span>
+                            <{:round($detail['price']/100,2)}>元/小时
+                        </span>
+                        <span class="sign-num"> 已报名<{$detail['sold_num']}>人 </span>
+                    </div>
+                    <div class="nz-tag guarantee-question">
+                        <div class="niuzhi-tag tag-item">平台保障</div>
+                        <div class="tag-content">
+                            <div>
+                                <img src="/static/default/wap/image/job/guarantee-hook.png">
+                                <div>安全保障</div>
+                            </div>
+                            <div>
+                                <img src="/static/default/wap/image/job/guarantee-hook.png">
+                                <div>工资保障</div>
+                            </div>
+                            <div>
+                                <img src="/static/default/wap/image/job/guarantee-hook.png">
+                                <div>补贴保障</div>
+                            </div>
+                        </div>
+                        <div class="tag-jump">
+                            <img src="/static/default/wap/image/job/guarantee-right.png">
+                        </div>
+                    </div>
+                    <div class="jobInfo-fee">
+                    </div>
+                </div>
+
+                <div class="item-common">
+                    <div class="card jobInfo-card">
+                        <div class="card-header-color">平台补贴
+                        </div>
+                        <div style="margin-top: 30px;margin-left: 20px">
+                            <{$detail['instructions']}>
+                        </div>
+
+                        <!--                        <div class="s-bt-btn">查看所有补贴</div>-->
+                    </div>
+                    <div class="card jobInfo-card">
+                        <div class="card-header-color">薪资福利</div>
+                        <div style="margin-top: 30px;margin-left: 20px">
+                            <{$detail['salary']}>
+                        </div>
+                    </div>
+
+                    <div class="card jobInfo-card">
+                        <div class="card-header-color">录用条件</div>
+                        <div class="card-content">
+                            <div style="margin-top: 30px;margin-left: 20px">
+                                <{$detail['enroll']}>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card jobInfo-card">
+                        <div class="card-header-color">岗位介绍</div>
+                        <div class="card-content">
+                            <div style="margin-top: 30px;margin-left: 20px">
+                                <{$detail['explain']}>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card jobInfo-card">
+                        <div class="card-header-color">公司介绍</div>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                昌硕科技（上海）有限公司座落于上海浦东新区康桥工业园,
+                                占地面积 3200 亩，母公司为和联集团，主要从事高科技电子产品的生产，
+                                为全球五大笔记本电脑生产企业之一，公司拥有世界级工程技术研发团队，
+                                为消费者、企业用户提供最具创新的科技解决方案。企业有员工共6万人。
+                                企业地址：上海浦东新区康桥镇康桥东路1159弄108号宿舍（康桥物业）
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card jobInfo-card">
+                        <div class="card-header-color">面试地址</div>
+                        <div class="card-content">
+                            <div class="navigation">
+                                <a class="external" id="go-navigation">
+
+                                    <div class="address-detail">中国上海市上海市浦东新区申沔路</div>
+                                    <div class="address-city">上海市&nbsp;&nbsp;浦东新区</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card jobInfo-card">
+                        <div class="card-header-color">入职流程</div>
+                        <div class="card-content">
+                            <div class="entry-process">
+                                <div>
+                                    <div><img src="__STATIC__/images/niuzhi/apply.png"></div>
+                                    <div>报名</div>
+                                    <div>选择免费报名<br>或vip报名</div>
+                                </div>
+                                <div>
+                                    <div><img src="__STATIC__/images/niuzhi/start.png"></div>
+                                    <div>发车</div>
+                                    <div>准确时间与<br>地点上车</div>
+                                </div>
+                                <div>
+                                    <div><img src="__STATIC__/images/niuzhi/interview.png"></div>
+                                    <div>面试</div>
+                                    <div>面试合格在规<br>定时间入职</div>
+                                </div>
+                                <div>
+                                    <div><img src="__STATIC__/images/niuzhi/entry.png"></div>
+                                    <div>入职</div>
+                                    <div>入职后<br>上传工牌</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card jobInfo-card">
+                        <div class="card-header-color">平台温馨提示</div>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                1、 只有在平台报名才能保证自己的利益；<br/>
+
+                                2、 平台所有工价及补贴以面试入职当天为准；<br/>
+
+                                3、 面试前一晚早点休息，不要喝碳酸饮料、酒、吃辣的，体检会导致转氨酶偏高；<br/>
+
+                                4、 去面试的时候把自己收拾的干净点，因为企业喜欢干净利落的人，会分到一个好一点的部门。<br/>
+
+                                5、 未明确扣社保的岗位，表明暂不扣缴，后续政策变动交社保时，承担个人部分费用<br/><br/><br/>
+
+                                平台工作网，让求职者高薪就业。平台提供的所有岗位真实可靠，如有虚标工价/返费，平台双倍赔付。<br>
+                                <a class="btn-call" href="tel:4008291113">客服电话：XXXX-XXX-XXX</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="random-job" class="card jobInfo-card" style="display: block;">
+                        <div class="card-header-color">猜你喜欢</div>
+                        <div class="card-content">
+                            <div class="row">
+                                <foreach name="like_goods" item="v">
+                                    <div id="recommendJob" class="col-33" onclick="jobinfo(<{$v['goods_id']}>)"><img
+                                            src="<{$v.photo}>">
+                                        <div class="random-job-saradjlskjdflskdjfy"><span>
+                                            <{$detail['price']}>元/小时
+                                        </span></div>
+                                        <div class="random-job-title"><{$v.title}></div>
+                                    </div>
+                                </foreach>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-bottom">
+        <div id="apply-btn">
+            <input type="hidden" value="510" id="jobInfoId">
+            <input type="hidden" value="" id="bath">
+
+            <div class="footer-action">
+                <img class="icon-follow" id="followJobImg" src="__STATIC__/images/niuzhi/unfollowed.png">
+                <a href="#"
+                   id="followJob" class="button">关注</a>
+            </div>
+            <!--                已关注样式-->
+            <!--            <div class="footer-action">-->
+            <!--                <img class="icon-follow" id="cancelFollowJobImg" src="/static/images/followed.png"></img>-->
+            <!--                <a href="#" id="cancelFollowJob" class="button"> 取消</a>-->
+            <!--            </div>-->
+
+            <!--                已报名-->
+            <!--            <div id="processed"><a href="#" disabled>已处理</a></div>-->
+            <!--            <div id="goShare">-->
+            <!--                <a href="#" disabled>分享成为VIP</a>-->
+            <!--            </div>-->
+
+            <div id="register">
+                <a href="<{:U('user/Job/jobSign',array('job_id'=>$job_info.job_id,'vip_sign_up'=>'0'))}>">
+                    <div><{$bottom_price}></div>
+                    免费报名
+                </a>
+            </div>
+
+            <div id="confirmSpell">
+                <a href="<{:U('user/Job/jobSign',array('job_id'=>$job_info.job_id,'vip_sign_up'=>'1'))}>">
+                    <div><{$bottom_price_vip}></div>
+                    VIP拿高价
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="share-dimmer">
+        <img src="__STATIC__/images/niuzhi/share.gif">
+    </div>
+</div>
+
+<div class="nav-index-foat risk">
+    <p class="nav-index-text">
+        <a href="<{:U('wap/job/vipRouter')}>" class="external">
+            <img src="/static/default/wap/image/index/vip-img.png" style="width:1.2rem;height:1.2rem"><br>VIP</a>
+    </p>
+</div>
+
+<!--<div class="nav-index-foat">-->
+<!--    <p class="nav-index-text">-->
+<!--        <a href="javascript:;" class="external" id="free-external">免费<br>咨询</a>-->
+<!--    </p>-->
+<!--</div>-->
+
+<!--
+    <div id="layer-code">
+        <div class="qr-code">
+            <img src="/static/images/nzjob-qrcode.jpg">
+            <p>长按图片识别图中二维码</p>
+            <p>关注微信公众号</p>
+        </div>
+        <div class="close">
+            &times;
+        </div>
+    </div>
+ -->
+
+<div class="guarantee-layer">
+    <div id="guarantee">
+        <div class="guarantee-header">平台保障</div>
+        <div class="guarantee-body">
+            <div class="guarantee-body-item">
+                <img class="item-icon" src="__STATIC__/images/niuzhi/guarantee-safe.png">
+                <div class="item-content">
+                    <div class="item-title">安全保障</div>
+                    <div class="item-text">所有岗位均经平台审核且为求职者购买保险</div>
+                </div>
+            </div>
+            <div class="guarantee-body-item">
+                <img class="item-icon" src="__STATIC__/images/niuzhi/guarantee-salary.png">
+                <div class="item-content">
+                    <div class="item-title">工资保障</div>
+                    <div class="item-text">正常离职不扣款不降价，工资一分不少</div>
+                </div>
+            </div>
+            <div class="guarantee-body-item">
+                <img class="item-icon" src="__STATIC__/images/niuzhi/guarantee-subsidy.png">
+                <div class="item-content">
+                    <div class="item-title">补贴保障</div>
+                    <div class="item-text">补贴不经过中介，平台直接发放</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="close-guarantee-btn">
+            <img src="__STATIC__/images/niuzhi/subsidy-close.png">
+        </div>
+    </div>
+</div>
+
+
+<script>
+    UVSetCookie("scrollTopFlag", "true", null);
+    var jobName = $("#jobName").val();
+
+    function jobinfo(jobid){
+        location.href = "http://www.zhaopin.com/index.php/Mobile/Job/jobInfo/job_id/"+jobid+".html";
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+.nav-index-foat {
+	z-index: 9999;
+}
+
+.top-container {
+	height: 100%;
+	width: 100%;
+	padding-bottom: 2.5rem;
+	background: -webkit-linear-gradient(left top, var(--mainColor), #1771F5);
+	/* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom right, var(--mainColor), #1771F5);
+	/* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom right, var(--mainColor),
+		#1771F5); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom right, var(--mainColor), #1771F5);
+	/* 标准的语法（必须放在最后）*/
+}
+
+.outer-container {
+	width: 100%;
+	height: 100%;
+	padding-bottom: 5.05rem;
+}
+
+.inner-container {
+	width: 100%;
+	height: 100%;
+	overflow: auto
+}
+
+.top-container .banner {
+	width: 100%;
+	height: 6rem;
+	background-image: url(/static/default/wap/image/ranking/rank-sui.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: cover;
+	padding-top: 1.6rem;
+}
+
+.top-container .banner-title {
+	height: 2.6rem;
+	margin-bottom: .2rem;
+	background-image: url(/static/default/wap/image/ranking/rank-title.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 11.5rem 2.6rem;
+}
+
+.top-container .banner-text {
+	font-size: .65rem;
+	color: #ffffff;
+	text-align: center;
+}
+
+#refer-ranking {
+	width: 90%;
+	max-width: 16.8rem;
+	padding: .7rem 1rem .6rem 1rem;
+	background-color: #ffffff;
+	margin: 0 auto;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px 5px rgba(0, 77, 194, 0.2);
+	margin-bottom: .1rem;
+}
+
+.ranking-body {
+	width: 100%;
+	height: 100%;
+}
+
+.ranking-body img {
+	width: 1.1rem;
+	height: auto;
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.ranking-title {
+	width: 93%;
+	max-width: 13.85rem;
+	height: 2.9rem;
+	background-image: url(/static/default/wap/image/ranking/rank-title-text.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: #ffffff;
+	margin: 0 auto;
+	padding-top: .2rem;
+	text-align: center;
+	font-size: .75rem;
+	color: #ffffff;
+	font-family: "PingFang SC";
+	line-height: 2rem;
+}
+
+.ranking-list {
+	padding-top: .2rem;
+}
+
+.ranking-item {
+	height: 1.7rem;
+	width: 100%;
+	font-size: .75rem;
+	line-height: 1.7rem;
+	display: flex;
+}
+
+.ranking-item .serial {
+	color: #5e5e5e;
+	padding: 0;
+	text-align: center;
+	flex-grow: 1;
+	max-width: 3rem;
+	min-width: 3rem;
+	position: relative;
+}
+
+.ranking-item .username {
+	color: #282828;
+	padding: 0;
+	overflow: hidden;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis; /*超出部分用...代替*/
+	flex-grow: 4;
+}
+
+.ranking-item .reward {
+	color: #f74f53;
+	padding: 0;
+	flex-grow: 2;
+	max-width: 3.5rem;
+	min-width: 3.5rem;
+}
+
+.ranking-item-odd {
+	background-color: #ffffff;
+}
+
+.ranking-item-even {
+	background-color: #f5f8fa;
+}
+
+.footer {
+	position: absolute;
+	width: 100%;
+	/*bottom: 3.25rem;*/
+	bottom: 2.5rem;
+}
+
+.footer .refer-btn-wrapper {
+	padding: .6rem 0.85rem;
+	margin: 0 auto;
+	/*max-width: 17.4rem;*/
+	text-align: center;
+	color: var(--mainColor);
+	font-size: .75rem;
+}
+
+.footer #recommend-btn {
+	width: 48.27%;
+	height: 2.2rem;
+	line-height: 2.2rem;
+	/*margin-right: .55rem;*/
+	background: linear-gradient(to right, #ff7956, #f75154);
+	border-radius: 1.1rem;
+	float: left;
+	color: white;
+}
+
+.footer #my-refer-btn {
+	width: 48.27%;
+	height: 2.2rem;
+	line-height: 2.2rem;
+	background-color: #ffffff;
+	border-radius: 1.1rem;
+	float: right;
+}
+
+.recommend-txt {
+	width: 100%;
+	color: #ffffff;
+	font-size: .6rem;
+	padding-bottom: .6rem;
+}

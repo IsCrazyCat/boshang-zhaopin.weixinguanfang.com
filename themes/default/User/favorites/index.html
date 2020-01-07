@@ -1,0 +1,132 @@
+<include file='public:header'/>
+<header class="top-fixed bg-yellow bg-inverse">
+	<div class="top-back">
+		<a class="top-addr" href="javascript:history.back(-1);"><i class="iconfont icon-angle-left"></i></a>
+	</div>
+	<div class="top-title">
+		工作收藏
+	</div>
+</header>
+<style>
+/*.index-items{list-style:none;padding:0; margin-top:2.2rem;}*/
+
+/*.index-items .line{display:block;padding:10px;width:100%;}*/
+/*.index-items img{width:90%;border:thin solid #eee;border-radius:3px;}*/
+/*.index-items p{height:30px;line-height:30px;overflow:hidden;color:#999;font-size:12px;margin:0;}*/
+
+.index-items p{
+	margin:0px;
+	padding:0px;
+}
+.index-items li{
+	list-style-type: none;
+	margin: 0 .2rem;
+	position: relative;
+	clear: both;
+	overflow: hidden;
+	background: #FFF;
+	border-bottom:thin solid #eee;
+}
+.item-image {
+	padding: .3rem .3rem;
+	float: left;
+	width: 25%;
+	height: auto;
+	position: relative;
+}
+
+.items-tag img{
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.item-image img {
+	display: block;
+	height: 4rem;
+}
+.item-image img {
+	border-radius: 0.22rem;
+	margin-top: .3rem;
+	margin-left: 0.25rem;
+	width: 100%;
+	object-fit: cover;
+}
+.item-inner{
+	width:70%;
+	margin-left:30%;
+	margin-top:4%;
+
+}
+.item-amount{
+	position: absolute;
+	text-align: center;
+	font-size: .6rem;
+	width: 3.8rem;
+	height: 2.5rem;
+	line-height: 1.25rem;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-40%);
+}
+.item-inner .item-amount p:first-child {
+	background: #0894ec;
+	color: #FFF;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.item-inner .item-amount p:last-child {
+	font-size: .6rem;
+	color: #fd9f2d;
+	border-left: 1px solid #fd9f2d;
+	border-right: 1px solid #fd9f2d;
+	border-bottom: 1px solid #fd9f2d;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.item-inner .item-amount p {
+	height: 1.0rem;
+	line-height: 1.0rem;
+}
+.hot-mark {
+	background: #fd9f2d !important;
+}
+.stop-mark {
+	background: #859199 !important;
+	border: 1px solid #859199;
+}
+.item-number{
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+.index-item-subtitle {
+	font-size: .5rem;
+	line-height: 1.5rem;
+	height: 1.5rem;
+	color: #626262;
+	width: 65%;
+	overflow: hidden;
+}
+.item-inner .item-price-row p {
+	font-size: .425rem;
+	color: #939393;
+	vertical-align: middle;
+	line-height: 1.0rem;
+}
+.item-inner .item-price-row .price-price span {
+	font-size: .9rem;
+	color: #fd9f2d;
+	margin-top: 5px;
+	font-weight: bold;
+}
+</style>
+<div class="item-list" id="item-list">
+	<ul class="index-items" id="index-joblist"></ul>
+</div>
+<script>
+	$(document).ready(function () {
+		loaddata("<{$nextpage}>", $("#index-joblist"), true);
+	});
+</script>
+<include file='public:footer'/>

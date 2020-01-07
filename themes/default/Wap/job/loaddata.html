@@ -1,0 +1,53 @@
+<volist name="hot_jobs" id="v" key="index">
+<php>$shop = D('Shop')->find($item['shop_id']);</php>
+    <li>
+        <a href="<{:U('wap/Job/detail',array('job_id'=>1))}>">
+            <div class="item-image">
+                <img src="/static/default/wap/image/index/joblogo.jpg" width="100%">
+            </div>
+            <div class="item-inner">
+                <div>
+                    <p class="item-number" title="<{$v.job_name}>">
+                        <{$v.job_name}>
+                    </p>
+                </div>
+                <p class="index-item-subtitle">
+                    <{$v.job_tags}>
+                </p>
+                <div class="item-price-row">
+                    <p class="price-price" style="padding-bottom: 10px">
+                        <span><{$v.job_price_month}></span>
+                        <{$v.job_price_month_unit}>
+                    </p>
+                </div>
+                <div class="item-amount">
+                    <if condition = "$v.is_recruit eq 0">
+                        <p class="stop-mark">已停招</p>
+                        <else/>
+                        <p class="hot-mark ">
+<!--                            <if condition="$v.show_price_type lt 2">-->
+<!--                                工价-->
+<!--                                <else/>-->
+<!--                                补贴-->
+<!--                            </if>-->
+                            <{$v['price_title']}>
+                        </p>
+                    </if>
+                    <if condition="$v.show_price_type eq 0">
+                        <p><{$v.job_price_hour}><{$v.job_price_hour_unit}></p>
+                        <elseif condition="$v.show_price_type eq 1"/>
+                        <p><{$v.job_price_day}><{$v.job_price_day_unit}></p>
+                        <elseif condition="$v.show_price_type eq 2"/>
+                        <p><{$v.job_subsidy_hour}><{$v.job_subsidy_hour_unit}></p>
+                        <elseif condition="$v.show_price_type eq 3"/>
+                        <p><{$v.job_subsidy_day}><{$v.job_subsidy_day_unit}></p>
+                        <elseif condition="$v.show_price_type eq 4"/>
+                        <p><{$v.job_subsidy_month}><{$v.job_subsidy_month_unit}></p>
+                        <else/>
+                        <p><{$v.job_price_hour}><{$v.job_price_hour_unit}></p>
+                    </if>
+                </div>
+            </div>
+        </a>
+    </li>
+</volist>

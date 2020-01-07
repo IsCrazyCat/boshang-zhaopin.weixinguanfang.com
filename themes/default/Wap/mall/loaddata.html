@@ -1,0 +1,37 @@
+<volist name="list" id="item" key="index">
+    <php>$shop = D('Shop')->find($item['shop_id']);</php>
+    <li>
+        <a href="<{:U('mall/detail',array('goods_id'=>$item['goods_id']))}>">
+            <div class="item-image">
+                <img src="<{:config_img($item['photo'])}>" width="100%">
+            </div>
+            <div class="item-inner">
+                <div>
+                    <p class="item-number" title="<{$item.job_name}>">
+                        <{$item.title}>
+                    </p>
+                </div>
+                <p class="index-item-subtitle">
+                    <{$item.guige}>
+                </p>
+                <div class="item-price-row">
+                    <p class="price-price" style="padding-bottom: 10px">
+                        <span>4000-6000</span>
+                        元/月
+                    </p>
+                </div>
+                <div class="item-amount">
+                    <p class="hot-mark ">
+<!--                        <if condition="$item.show_price_type lt 2">-->
+<!--                            工价-->
+<!--                            <else/>-->
+<!--                            补贴-->
+<!--                        </if>-->
+                        <{$item['price_title']}>
+                    </p>
+                    <p><{:round($item['price']/100,2)}><{$item['price_unit']}></p>
+                </div>
+            </div>
+        </a>
+    </li>
+</volist>

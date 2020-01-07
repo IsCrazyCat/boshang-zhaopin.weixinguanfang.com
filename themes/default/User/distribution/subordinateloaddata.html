@@ -1,0 +1,25 @@
+<foreach name="list" item="item">
+       <li class="line">
+        <dt>
+            <a class="x3">ID：<{$item['user_id']}></a>
+            <a class="x9 text-right">注册时间：<{$item.reg_time|date='Y-m-d H:i',###}> </a>
+        </dt>
+        
+          <dd class="zhong">
+                <div class="x12">
+                    <p> 账户：<{$item['account']}></p>
+                    <p> 昵称：<{$item['nickname']}></p>
+                    <p class="text-small">
+                        会员等级：
+                        <if condition="empty($item['rank_id']) neq true ">
+                            <{$ranks[$item['rank_id']]['rank_name']}>
+                        <else/>
+                            无等级
+                        </if>
+                    </p>
+              </div>
+          </dd>
+    </li>
+    <div class="blank-10 bg"></div>
+</foreach>
+

@@ -1,0 +1,728 @@
+@import url('//at.alicdn.com/t/font_736148_boureyx94fj.css');
+
+
+/*全局色值变量*/
+:root{
+	--mainColor: #1496f5;
+	--secondaryColor:#fd9f2d;
+}
+/*全局button 样式*/
+.niu-button-large{
+	border-radius: 1.1rem;
+	border: none;
+	height: 2.2rem;
+	width: 100%;
+	color: white;
+	font-size: 0.75rem;
+	background: linear-gradient(to right, #1496f5, #1771f5);
+	
+}
+
+body {
+	width: 100%;
+	max-width: 480px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+/* 岗位详情页 START */
+/* 岗位详细头部 */
+#page-nav-bar-labels .bar {
+	background-color: rgba(8, 148, 246, 0.6);
+}
+
+.page .page-group {
+	background: #eeeeee !important;
+}
+
+#page-nav-bar-labels .title {
+	color: #fff;
+}
+
+.back-icon {
+	padding: .45rem .1rem;
+}
+
+.text-loop {
+	width: 85%;
+	margin: 0 auto;
+	display: inline-block;
+	font-size: 0.8rem;
+	color: #FFF;
+}
+
+.text-loop .ad-slogan {
+	line-height: 2.2rem;
+	user-select: none;
+	white-space: nowrap;
+}
+/* 页面的免费咨询 以及 拼*/
+.nav-index-foat2,
+.nav-index-foat {
+	position: absolute;
+	right: 1.0rem;
+	z-index: 9999;
+	bottom: 2.4rem;
+}
+
+.nav-index-foat p {
+	width: 2.8rem;
+	height: 2.8rem;
+	background-color: white;
+	border-radius: 2.4rem;
+	text-align: center;
+	box-shadow: 0 0 5px 2px rgba(96, 96, 96, 0.1);
+}
+.nav-index-foat p a {
+	color: var(--mainColor);
+	font-size: .7rem;
+	margin-top: 0.4rem;
+	display: inline-block;
+}
+
+.nav-index-foat.risk2 p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--secondaryColor);
+}
+.nav-index-foat.risk2 p a {
+	color: #FFFFFF;
+	margin-top: 0rem;
+}
+
+.swiper-pagination {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	text-align: center;
+	bottom: 5px;
+	width: 100%;
+}
+
+.swiper-pagination-bullet {
+	width: 14px !important;
+	height: 4px !important;
+	border-radius: 2px !important;
+	background: #eeeeee;
+	margin: 0 2px !important;
+	cursor: pointer
+}
+
+.swiper-pagination-bullet-active {
+	opacity: 1;
+	background: white !important;
+	width: 14px !important;
+	height: 4px !important;
+	width: 14px !important;
+	border-radius: 2px !important;
+	margin: 0 1px !important;
+}
+
+.risk {
+	bottom: 7.8rem;
+}
+
+.risk p {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	background-color: rgba(169, 57, 75, 0.8);
+}
+
+.risk p a {
+	margin-top: 0;
+	font-size: .8rem;
+}
+/* 微信页面分享小图片 */
+#share-dimmer {
+	z-index: 9999999999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.65);
+	display: none;
+}
+
+#share-dimmer>img {
+	position: absolute;
+	right: 15px;
+	top: 0;
+}
+/* 岗位详情页 END */
+/* 微信分享弹出coast */
+.tip-box {
+	position: fixed;
+	top: 30%;
+	margin-top: -50px;
+	width: 100%;
+	z-index: 9999;
+	text-align: center
+}
+
+.tip-box .tip-body {
+	align-items: center;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 12px 14px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: rgba(51, 51, 51, .9)
+}
+
+.tip-box .tip-body:after {
+	content: '';
+	display: block;
+	clear: both
+}
+
+.tip-box .tip-body h3 {
+	font-size: 16px;
+	color: #fff;
+	line-height: 35px;
+	vertical-align: middle
+}
+/* 热招 和 停招 */
+.hot-mark {
+	background: var(--secondaryColor) !important;
+}
+
+.stop-mark {
+	background: #859199 !important;
+	border: 1px solid #859199;
+}
+/* 钱管家 */
+.contentList {
+	overflow: hidden;
+	padding: 0 .8rem;
+	margin-top: 0;
+}
+
+.contentList li {
+	display: inline-block;
+	width: 48%;
+	margin-top: 1.0rem;
+}
+
+.contentList li p {
+	text-align: center;
+	margin: 0;
+	color: #333333;
+}
+/* 搜索框 */
+#search {
+	color: #666666;
+	border-radius: 0.7rem;
+}
+
+#page-index .search-input a {
+	font-size: .65rem;
+	margin: 0;
+	height: 1.4rem;
+	line-height: 1.4rem;
+	border: 0;
+	padding-left: 1.4rem;
+	box-sizing: border-box;
+	width: 100%;
+	display: block;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: .25rem;
+	font-family: inherit;
+	color: #ccc;
+	font-size: .65rem;
+	font-weight: normal;
+	background-color: #fff;
+}
+
+/* 首页 岗位列表 START */
+.index-items li {
+	overflow: hidden
+}
+
+.index-items li a.item-link {
+	padding-left: 0;
+}
+
+.index-item-list {
+	background-color: #fff;
+}
+
+.index-item-list .index-items {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0 0 0 0;
+	overflow: hidden;
+	padding: 0 0 0 0;
+}
+
+.index-item-list .index-items li {
+	list-style-type: none;
+	margin: 0 .2rem;
+	position: relative;
+}
+
+.index-item-list .index-items li .item-image {
+	padding: .3rem .3rem;
+	float: left;
+	width: 25%;
+	height: auto;
+	position: relative;
+}
+
+.index-item-list .index-items li .item-image img {
+	display: block;
+	height: 3rem;
+}
+
+.item-image img {
+	border-radius: 0.22rem;
+	margin-top: .3rem;
+	margin-left: 0.25rem;
+	width: 100%;
+	object-fit: cover;
+}
+
+.index-item-list .index-items li .item-inner {
+	float: left;
+	width: 70%;
+	position: relative;
+}
+
+.item-inner {
+	font-size: .9rem;
+	border-bottom: 1px #f1f1f1 solid;
+	padding-top: .3rem;
+	padding-bottom: .3rem;
+	margin-left: 12px;
+}
+
+.item-inner .item-price-row .price-price {
+	float: left;
+}
+
+.item-inner .item-price-row .price-price span {
+	font-size: .75rem;
+	color: var(--secondaryColor);
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+.index-item-list .index-items li .item-inner p {
+	margin: 0;
+}
+
+.index-item-list .index-items li .item-inner .index-item-title {
+	color: #282828;
+	font-size: 0.75rem;
+}
+
+.index-item-list .index-items li .item-inner  .index-item-subtitle {
+	font-size: .5rem;
+	line-height: .96rem;
+	height: .96rem;
+	color: #626262;
+	width: 65%;
+	overflow: hidden;
+}
+
+p.index-item-subtitle span {
+	float: left;
+	/*padding: .1rem .2rem;*/
+	margin-bottom: .2rem;
+	margin-right: .2rem;
+	/*color: #FFF;*/
+	/*background: #5769a1;*/
+	border-radius: 7px;
+}
+
+.index-item-list .index-items li .item-inner .item-price-row {
+	overflow: hidden;
+	vertical-align: middle;
+	margin-top: .1rem;
+}
+
+.item-inner .item-price-row p {
+	font-size: .425rem;
+	color: #939393;
+	vertical-align: middle;
+	line-height: 1.0rem
+}
+
+.item-inner .item-price-row .item-price {
+	float: right;
+}
+/* 补贴 */
+.item-inner .item-amount {
+	position: absolute;
+	text-align: center;
+	font-size: .6rem;
+	width: 3.8rem;
+	height: 2.5rem;
+	line-height: 1.25rem;
+	right: 0;
+	top: 50%;
+	transform: translateY(-40%);
+}
+
+.item-inner .item-amount p {
+	height: 1.0rem;
+	line-height: 1.0rem;
+}
+
+.item-inner .item-amount p:first-child {
+	background: #0894ec;
+	color: #FFF;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.item-inner .item-amount p:last-child {
+	font-size: .6rem;
+	color: var(--secondaryColor);
+	border-left: 1px solid var(--secondaryColor);
+	border-right: 1px solid var(--secondaryColor);
+	border-bottom: 1px solid var(--secondaryColor);
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+/*.item-inner .item-price-row .money-hour {font-weight: bold;margin-right: .5rem!important;background-color: red;color: white;line-height: normal;font-size: .5rem;padding:2px;}*/
+.item-inner .item-price-row .item-number {
+	float: left;
+	line-height: 1.35rem;
+}
+
+.text-filter {
+	white-space: nowrap;
+	width: 65%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/* 首页 岗位列表 END */
+/* 热招小图标 */
+/*.job-hot,.job-top{position: absolute;top: .2rem;left: -1rem;width: 65%;height: 1rem;line-height: 1rem;text-align: center;font-size: 0.52rem;font-weight: bold;background-color: #f00;color: #fff;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-o-transform: rotate(-45deg);transform: rotate(-45deg);}*/
+/*.job-top{background-color: #00f;}*/
+/* 滚动条 */
+::-webkit-scrollbar {
+	width: 0;
+}
+
+/* 底部栏目 */
+.bar-tab {
+	display: flex;
+	z-index: 9998
+}
+
+.bar-tab .tab-item {
+	flex-grow: 1;
+	padding-top: 3px;
+}
+
+.bar-tab .tab-item .icon {
+	height: 1.0rem;
+	line-height: 1.0rem;
+}
+
+.bar-tab .tab-item .iconfont {
+	right: 0;
+	line-height: 1.0rem;
+	height: 1.0rem;
+	color: rgb(183, 183, 183);
+}
+
+.bar-tab .tab-item .active .iconfont {
+	color: var(--mainColor);
+}
+
+.icon-service:before,
+.icon-user-info:before,
+.icon-tuijian:before,
+.icon-homepage:before,
+.icon-back-top:before {
+	content: '';
+	background-size: 1.0rem 1.0rem;
+	position: absolute;
+	width: 1.0rem;
+	height: 1.0rem;
+	z-index: 100;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/*首页未激活*/
+.tab-icon .icon-homepage:before {
+	background-image: url(../images/navbar/home_unselected.png) !important;
+}
+
+/*首页已激活*/
+.active .icon-homepage:before {
+	background-image: url(../images/navbar/home_selected.png) !important;
+}
+
+/*推荐未激活*/
+.tab-icon .icon-tuijian:before {
+	background-image: url(../images/navbar/tuijian_unselected.png) !important;
+	right: -0.5rem;
+}
+
+/*推荐已激活*/
+.active .icon-tuijian:before {
+	background-image: url(../images/navbar/tuijian_selected.png) !important;
+	right: -0.5rem;
+}
+
+/*服务未激活*/
+.tab-icon .icon-service:before {
+	background-image: url(../images/navbar/service_unselected.png) !important;
+	right: -0.5rem;
+}
+/*服务已激活*/
+.active .icon-service:before {
+	background-image: url(../images/navbar/service_selected.png) !important;
+	right: -0.5rem;
+}
+
+/* 个人中心图标 未激活 */
+.tab-icon .icon-user-info:before {
+	background-image: url(../images/navbar/user_unselected.png) !important;
+	right: -0.5rem;
+}
+/* 个人中心图标 激活 */
+.active .icon-user-info:before {
+	background-image: url(../images/navbar/user_selected.png) !important;
+	right: -0.5rem;
+}
+/* 返回顶部图标 */
+.tab-icon .icon-back-top:before {
+	background-image: url(../images/backtop1.png);
+}
+
+.tab-icon .icon {
+	right: .5rem;
+}
+/* 登陆界面 和 更换手机号码 验证码样式 */
+.validator-code.item-inner, .recommend-person.item-inner {
+	padding-right: 0;
+}
+
+.validator-code .item-input input {
+	width: 50%;
+	display: inline-block;
+	padding-left: 2px;
+}
+
+.item-content {
+	height: 2.8rem;
+}
+
+.validator-code .item-input p {
+	position: absolute;
+	right: 0;
+	display: inline-block;
+	width: 4.2rem;
+	text-align: center;
+	margin: 0;
+	line-height: 1.6rem;
+	height: 1.6rem;
+	background: #f2f2f2;
+	padding: 0 0.6rem;
+	border-radius: 0.8rem;
+	display: inline-block;
+}
+
+.validator-code .item-input p>a {
+	font-size: .6rem;
+	color: var(--mainColor);
+}
+/* 我的关注页面 已下架岗位样式 */
+.job-stop {
+	position: absolute;
+	top: 40%;
+	right: 25px;
+	min-width: 3.55rem;
+	line-height: 1rem;
+	text-align: center;
+	font-size: 0.6rem;
+	font-weight: bold;
+	background-color: rgba(101, 166, 232, 0.64);;
+	color: #fff;
+	-webkit-transform: rotate(-25deg);
+	-moz-transform: rotate(-25deg);
+	-ms-transform: rotate(-25deg);
+	-o-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	padding: 0 .35rem;
+}
+
+.job-stop span {
+	letter-spacing: .1rem;
+	color: #e80608;
+}
+/* 关于我们页面部分样式 */
+.contentText {
+	text-align: center;
+	margin-top: 2.0rem;
+}
+
+.contentText p {
+	margin: .4rem 0;
+	color: #3d4145;
+}
+
+.contentText .al-2em {
+	text-indent: 2em;
+	text-align: left;
+}
+/* 个人中心右箭头 */
+.a-text-color .icon-right {
+	color: #ccc;
+	margin-left: auto;
+}
+/* 暂无补贴 | 暂无工作 | 暂无关注 公共样式 */
+#currentNo {
+	padding-bottom: 10px;
+	line-height: 30px;
+	text-align: center;
+}
+
+#currentNo a {
+	font-size: .7rem;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #ccc;
+  font-size: 16px;
+}
+
+/*弹出框模块*/
+.modal{
+	z-index: 19861018;
+}
+.modal-buttons {
+	height: 2.7rem;
+	border-radius: 0 0 .35rem 0.35rem;
+	background: white;
+}
+
+.modal-title {
+	color: #282828;
+	font-size: 0.75rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 0.3rem;
+}
+
+.modal-text {
+	font-size: 0.75rem;
+}
+
+.modal-inner:after {
+	background-color: #f0f0f0;
+}
+
+.modal-button:first-child {
+	color: #282828 !important;
+	height: 2.7rem;
+	line-height: 2.7rem;
+	font-size: 0.75rem;
+	background: white;
+}
+
+.modal-button:after {
+	background-color: #f0f0f0;
+	height: 2.7rem;
+	line-height: 2.7rem;
+}
+
+.modal-button:last-child {
+	color: var(--secondaryColor) !important;
+	height: 2.7rem;
+	line-height: 2.7rem;
+	font-size: 0.75rem;
+	background: white;
+}
+
+.modal-inner {
+	background: white !important;
+}
+
+/*平台客服电话*/
+.platform-tel {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: .65rem;
+    color: #898989;
+    margin-bottom: 0.5rem;
+}
+
+.bar-tab .tab-item .badge {
+     background-color: #f74f53;
+}
+
+.no-before .modal-inner .modal-title{
+	visibility: visible!important;
+	padding-top: .75rem;
+}
+.no-before .modal-inner {
+	-moz-border-radius-topright: .35rem!important;
+	-moz-border-radius-topleft: .35rem!important;
+	border-top-right-radius: .35rem!important;
+	border-top-left-radius: .35rem!important;
+}
+.no-before .modal-inner:before {
+	content: none!important;
+	background: none!important;
+}
+
+.clear-both-after {
+	zoom: 1; /*为了兼容性，因为ie6/7不能使用伪类，所以加上此行代码。*/
+}
+
+.clear-both-after:after {
+	clear: both;
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+.forbid-select{
+	-o-user-select: none;
+	-moz-user-select: none; /*火狐 firefox*/
+	-webkit-user-select: none; /*webkit浏览器*/
+	-ms-user-select: none; /*IE10+*/
+	-khtml-user-select :none; /*早期的浏览器*/
+	user-select: none;
+}
+.nz-hide{
+    display: none!important;
+}
+.npp{
+	width: 100%;
+	background: #f4f4f4;
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.npp img{
+	width: 100%;
+	background: #fff;
+}
+.limit-word-10 {
+	max-width: 10em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis; /*超出部分用...代替*/
+}
+.nz-visibility-hidden{
+	visibility: hidden;
+}

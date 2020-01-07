@@ -1,0 +1,67 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+}
+body {
+    max-width: 480px;
+    min-width: 320px;
+    margin: 0 auto;
+    background: #eee;
+}
+#page-search.page, .page-group {
+    background: #fff;
+}
+#page-search .bar {
+    background: #FFF;
+}
+#page-search .bar .title {
+    display: flex;
+}
+#page-search .bar .icon {
+    font-size: .8rem;
+    color: #5f646e;
+}
+#page-search .search-input {
+    flex: 1;
+}
+#page-search .searchbar-cancel {
+    padding-left: .6rem;
+    padding-right: .6rem;
+    font-size: .7rem;
+    font-weight: normal;
+    color: #b2b2b2;
+}
+#page-search .search-input input {
+    border: none;
+    font-size: .65rem;
+    line-height: 1.45rem;
+}
+#page-search .search-input input::placeholder,
+#page-search .search-input input:-moz-placeholder,
+#page-search .search-input input:-ms-input-placeholder,
+#page-search .search-input input::-webkit-input-placeholder {
+    font-size: .65rem;
+}
+#page-search #tag-list {
+    background: #fff;
+}
+#page-search #tag-list p {
+    margin: .5em 10px 0 10px;
+    line-height: 1.5rem;
+    font-size: .75rem;
+}
+#page-search #tag-list .tag-list-items {
+    padding: 10px;
+    margin: 0;
+}
+#page-search #tag-list .tag-list-items li {
+    display: inline-block;
+    font-size: .65rem;
+    padding: .3rem;
+    background: #eee;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 0 8px 2px;
+    color: #666;
+}
