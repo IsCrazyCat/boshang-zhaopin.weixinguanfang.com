@@ -602,11 +602,11 @@
             <div class="intro-bd"><{$detail['explain']}></div>
         </div>
     </if>
-    <if condition="empty($shopdetails['details']) neq true">
+    <if condition="empty($detail['company_explain']) neq true">
         <div class="item-intro">
             <div class="intro-title">公司介绍</div>
             <div class="intro-bd">
-                <{$shopdetails['details']}>
+                <{$detail['company_explain']}>
             </div>
         </div>
     </if>
@@ -620,29 +620,24 @@
             <script>
                 $(function () {
                     $("#addr").on("click",function(){
-                        window.location.href="<{:U('shop/gps',array('shop_id'=>$detail['shop_id']))}>";
+                        window.location.href="<{:U('mall/gps',array('goods_id'=>$detail['goods_id']))}>";
                         return;
                     });
                 });
             </script>
-            <div class="address-detail" id="addr"><{$shop['addr']}></div>
-            <div class="address-city"><a class="button button-small bg-yellow margin-small-right" href="<{:U('shop/gps',array('shop_id'=>$detail['shop_id']))}>"><i class="iconfont icon-daohang"></i> 查看位置</a></div>
+            <div class="address-detail" id="addr"><{$detail['addr']}></div>
+            <div class="address-city"><a class="button button-small bg-yellow margin-small-right" href="<{:U('mall/gps',array('goods_id'=>$detail['goods_id']))}>"><i class="iconfont icon-daohang"></i> 查看位置</a></div>
         </div>
     </div>
 
-    <div class="item-intro">
-        <div class="intro-title">平台温馨提示</div>
-        <div class="intro-bd">
-            1、 只有在平台报名才能保证自己的利益；<br/>
-            2、 平台所有工价及补贴以面试入职当天为准；<br/>
-            3、 面试前一晚早点休息，不要喝碳酸饮料、酒、吃辣的，体检会导致转氨酶偏高；<br/>
-            4、 去面试的时候把自己收拾的干净点，因为企业喜欢干净利落的人，会分到一个好一点的部门。<br/>
-            5、 未明确扣社保的岗位，表明暂不扣缴，后续政策变动交社保时，承担个人部分费用<br/><br/><br/>
-
-            平台工作网，让求职者高薪就业。平台提供的所有岗位真实可靠，如有虚标工价/返费，平台双倍赔付。<br>
-
+    <if condition="empty($detail['reminder']) neq true">
+        <div class="item-intro">
+            <div class="intro-title">平台温馨提示</div>
+            <div class="intro-bd">
+                <{$detail['reminder']}>
+            </div>
         </div>
-    </div>
+    </if>
 
     <!--如果看了又看不等于空-->
 

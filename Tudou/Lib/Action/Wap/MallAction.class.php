@@ -1300,4 +1300,30 @@ class MallAction extends CommonAction{
         dump($result);
         die;
     }
+    public function gps($goods_id,$type = '0'){
+        $goods_id = (int) $goods_id;
+        $type = (int) $this->_param('type');
+        if(empty($goods_id)){
+            $this->error('该岗位不存在');
+        }
+        $goods = D('Goods')->find($goods_id);
+        $this->assign('goods', $goods);
+        $this->assign('type', $type);
+
+        $this->assign('amap', $amap= $this->bd_decrypt($goods['lng'],$goods['lat']));
+        $this->display();
+    }
+    //BD-09(百度) 坐标转换成  GCJ-02(火星，高德) 坐标
+    //@param bd_lon 百度经度
+    //@param bd_lat 百度纬度
+    public function bd_decrypt($bd_lon,$bd_lat){
+        $x_pi = 3.14159265358979324 * 3000.0 / 180.0;
+        $x = $bd_lon - 0.0065;
+        $y = $bd_lat - 0.006;
+        $z = sqrt($x * $x + $y * $y) - 0.00002 * sin($y * $x_pi);
+        $theta = atan2($y, $x) - 0.000003 * cos($x * $x_pi);
+        $data['gg_lon'] = $z * cos($theta);
+        $data['gg_lat'] = $z * sin($theta);
+        return $data;
+    }
 }

@@ -2,8 +2,8 @@
 
 class GoodsAction extends CommonAction {
 
-    private $create_fields = array('title','intro','shoplx','tag1','tag2','tag3','guige', 'num','is_reight','weight','kuaidi_id','shop_id', 'photo', 'cate_id','price_title', 'price', 'mall_price','price_unit','price_month','use_integral','mobile_fan', 'sold_num', 'orderby', 'views', 'instructions', 'instructions1','details', 'salary','enroll','explain','reminder', 'end_date', 'orderby','is_vs1','is_vs2','is_vs3','is_vs4','is_vs5','is_vs6','is_backers');
-    private $edit_fields = array('title','intro','shoplx','tag1','tag2','tag3','guige','num', 'is_reight','weight','kuaidi_id','shop_id', 'photo', 'cate_id', 'price_title','price', 'mall_price','price_unit','price_month','use_integral','mobile_fan', 'sold_num', 'orderby', 'views', 'instructions', 'instructions1','details', 'salary','enroll','explain','reminder','end_date', 'orderby','is_vs1','is_vs2','is_vs3','is_vs4','is_vs5','is_vs6','is_backers');
+    private $create_fields = array('title','intro','shoplx','tag1','tag2','tag3','guige', 'num','is_reight','weight','kuaidi_id','shop_id', 'photo', 'cate_id','price_title', 'price', 'mall_price','price_unit','price_month','use_integral','mobile_fan', 'sold_num', 'orderby', 'views', 'instructions', 'instructions1','details', 'salary','enroll','explain','company_explain','reminder', 'end_date', 'orderby','is_vs1','is_vs2','is_vs3','is_vs4','is_vs5','is_vs6','is_backers','addr','lng','lat');
+    private $edit_fields = array('title','intro','shoplx','tag1','tag2','tag3','guige','num', 'is_reight','weight','kuaidi_id','shop_id', 'photo', 'cate_id', 'price_title','price', 'mall_price','price_unit','price_month','use_integral','mobile_fan', 'sold_num', 'orderby', 'views', 'instructions', 'instructions1','details', 'salary','enroll','explain','company_explain','reminder','end_date', 'orderby','is_vs1','is_vs2','is_vs3','is_vs4','is_vs5','is_vs6','is_backers','addr','lng','lat');
 
 	
     public function _initialize(){
@@ -120,13 +120,13 @@ class GoodsAction extends CommonAction {
 //			}
 //		}
         $data['shop_id'] = (int) $data['shop_id'];
-        if(empty($data['shop_id'])){
-            $this->tuError('企业不能为空');
-        }
+//        if(empty($data['shop_id'])){
+//            $this->tuError('企业不能为空');
+//        }
         $shop = D('Shop')->find($data['shop_id']);
-        if(empty($shop)){
-            $this->tuError('请选择正确的企业');
-        }
+//        if(empty($shop)){
+//            $this->tuError('请选择正确的企业');
+//        }
         $data['cate_id'] = (int) $data['cate_id'];
         if (empty($data['cate_id'])) {
             $this->tuError('请选择分类');
@@ -209,6 +209,13 @@ class GoodsAction extends CommonAction {
         if($words = D('Sensitive')->checkWords($data['explain'])) {
             $this->tuError('岗位介绍含有敏感词：' . $words);
         }
+        $data['company_explain'] = SecurityEditorHtml($data['company_explain']);
+        if(empty($data['company_explain'])){
+//            $this->tuError('岗位介绍不能为空');
+        }
+        if($words = D('Sensitive')->checkWords($data['company_explain'])) {
+//            $this->tuError('岗位介绍含有敏感词：' . $words);
+        }
         $data['reminder'] = SecurityEditorHtml($data['reminder']);
         if(empty($data['reminder'])){
 //            $this->tuError('平台提示不能为空');
@@ -216,6 +223,12 @@ class GoodsAction extends CommonAction {
         if($words = D('Sensitive')->checkWords($data['reminder'])) {
             $this->tuError('平台提示含有敏感词：' . $words);
         }
+        $data['addr'] = htmlspecialchars($data['addr']);
+        if(empty($data['addr'])){
+            $this->tuError('工作地址不能为空');
+        }
+        $data['lng'] = htmlspecialchars($data['lng']);
+        $data['lat'] = htmlspecialchars($data['lat']);
         $data['end_date'] = htmlspecialchars($data['end_date']);
         if(empty($data['end_date'])){
             $this->tuError('截止日期不能为空');
@@ -235,6 +248,7 @@ class GoodsAction extends CommonAction {
         $data['orderby'] = (int) $data['orderby'];
         $data['is_mall'] = 1;
 		$data['is_backers'] = (int) $data['is_backers'];
+
         return $data;
     }
 	
@@ -361,13 +375,13 @@ class GoodsAction extends CommonAction {
 //		}
 //
 		$data['shop_id'] = (int) $data['shop_id'];
-        if(empty($data['shop_id'])){
-            $this->tuError('企业不能为空');
-        }
+//        if(empty($data['shop_id'])){
+//            $this->tuError('企业不能为空');
+//        }
         $shop = D('Shop')->find($data['shop_id']);
-        if(empty($shop)){
-            $this->tuError('请选择正确的企业');
-        }
+//        if(empty($shop)){
+//            $this->tuError('请选择正确的企业');
+//        }
     
         $data['cate_id'] = (int) $data['cate_id'];
         if(empty($data['cate_id'])){
@@ -450,10 +464,23 @@ class GoodsAction extends CommonAction {
         if($words = D('Sensitive')->checkWords($data['explain'])) {
 //            $this->tuError('岗位介绍含有敏感词：' . $words);
         }
+        $data['company_explain'] = SecurityEditorHtml($data['company_explain']);
+        if(empty($data['company_explain'])){
+//            $this->tuError('岗位介绍不能为空');
+        }
+        if($words = D('Sensitive')->checkWords($data['company_explain'])) {
+//            $this->tuError('岗位介绍含有敏感词：' . $words);
+        }
         $data['reminder'] = SecurityEditorHtml($data['reminder']);
         if(empty($data['reminder'])){
 //            $this->tuError('平台提示不能为空');
         }
+        $data['addr'] = htmlspecialchars($data['addr']);
+        if(empty($data['addr'])){
+            $this->tuError('工作地址不能为空');
+        }
+        $data['lng'] = htmlspecialchars($data['lng']);
+        $data['lat'] = htmlspecialchars($data['lat']);
         if($words = D('Sensitive')->checkWords($data['reminder'])) {
             $this->tuError('平台提示含有敏感词：' . $words);
         }

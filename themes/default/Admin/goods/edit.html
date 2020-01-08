@@ -406,6 +406,20 @@
                     });
                 </script>
                 <tr>
+                    <td class="lfTdBt">公司介绍：</td>
+                    <td class="rgTdBt">
+                        <script type="text/plain" id="data_company_explain" name="data[company_explain]"
+                                style="width:800px;height:200px;"><{$detail.company_explain}>
+                        </script>
+                    </td>
+                </tr>
+                <script>
+                    um = UE.getEditor('data_company_explain', {
+                        lang: 'zh-cn',
+                        toolbars: [['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic', 'underline', 'fontborder', 'backcolor', 'fontsize', 'fontfamily', 'justifyleft', 'justifyright', 'justifycenter', 'justifyjustify', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', 'link', 'unlink', 'map', 'template', 'background', 'inserttable', 'print', 'attachment', 'emotion', 'snapscreen', 'insertimage', 'music', 'insertvideo']],
+                    });
+                </script>
+                <tr>
                     <td class="lfTdBt">温馨提示：</td>
                     <td class="rgTdBt">
                         <script type="text/plain" id="data_reminder" name="data[reminder]"
@@ -419,6 +433,23 @@
                         toolbars: [['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic', 'underline', 'fontborder', 'backcolor', 'fontsize', 'fontfamily', 'justifyleft', 'justifyright', 'justifycenter', 'justifyjustify', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', 'link', 'unlink', 'map', 'template', 'background', 'inserttable', 'print', 'attachment', 'emotion', 'snapscreen', 'insertimage', 'music', 'insertvideo']],
                     });
                 </script>
+                <tr>
+                    <td class="lfTdBt">工作地址：</td>
+                    <td class="rgTdBt">
+                        <input type="text" name="data[addr]" value="<{$detail.addr|default=''}>" class="scAddTextName w210" />
+                    </td>
+                </tr>
+                <tr>
+
+                    <td class="lfTdBt">地址坐标：</td>
+                    <td class="rgTdBt">
+                        <div class="lt">
+                            经度<input type="text" name="data[lng]" id="data_lng" value="<{$detail.lng|default=''}>" class="scAddTextName w210 w100" />
+                            纬度 <input type="text" name="data[lat]" id="data_lat" value="<{$detail.lat|default=''}>" class="scAddTextName w210 w100" />
+                        </div>
+                        <a style="margin-left: 10px;" mini="select"  w="600" h="600" href="<{:U('public/maps',array('lat'=>$detail['lat'],'lng'=>$detail['lng']))}>" class="seleSj">百度地图</a>
+
+                </tr>
                 <tr>
                     <td class="lfTdBt">截止时间：</td>
                     <td class="rgTdBt"><input type="text" name="data[end_date]" value="<{$detail.end_date|default=''}>"
